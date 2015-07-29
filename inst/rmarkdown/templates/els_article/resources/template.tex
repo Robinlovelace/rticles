@@ -48,6 +48,10 @@
 
 \journal{Nuclear Physics B}
 
+$for(header-includes)$
+$header-includes$
+$endfor$
+
 \begin{document}
 
 \begin{frontmatter}
@@ -72,39 +76,30 @@
 %% \address{Address\fnref{label3}}
 %% \fntext[label3]{}
 
-\title{}
+% Title must be 150 characters or less
+\begin{flushleft}
+{\Large
+\textbf{$title$}
+}
+% Insert Author names, affiliations and corresponding author email.
+\\
+$for(author)$
+  $author.name$\textsuperscript{$author.affiliation$$if(author.email)$*$endif$}$sep$,
+$endfor$
+\\
+$for(affiliation)$
+\bf{$affiliation.id$} $if(affiliation.department)$$affiliation.department$, $endif$$if(affiliation.institution)$$affiliation.institution$, $endif$ $if(affiliation.city)$$affiliation.city$, $endif$ $if(affiliation.state)$$affiliation.state$, $endif$ $if(affiliation.country)$$affiliation.country$$endif$
+\\
+$endfor$
 
-%% use optional labels to link authors explicitly to addresses:
-%% \author[label1,label2]{}
-%% \address[label1]{}
-%% \address[label2]{}
+\end{flushleft}
 
-\author{}
 
-\address{}
-
-\begin{abstract}
-%% Text of abstract
-
-\end{abstract}
-
-\begin{keyword}
-%% keywords here, in the form: keyword \sep keyword
-
-%% PACS codes here, in the form: \PACS code \sep code
-
-%% MSC codes here, in the form: \MSC code \sep code
-%% or \MSC[2008] code \sep code (2000 is the default)
-
-\end{keyword}
-
-\end{frontmatter}
 
 %% \linenumbers
 
 %% main text
-\section{}
-\label{}
+$body$
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
@@ -122,14 +117,6 @@
 %% else use the following coding to input the bibitems directly in the
 %% TeX file.
 
-\begin{thebibliography}{00}
-
-%% \bibitem[Author(year)]{label}
-%% Text of bibliographic item
-
-\bibitem[ ()]{}
-
-\end{thebibliography}
 \end{document}
 
 \endinput
