@@ -3,6 +3,7 @@
 export(acm)
 export(acs)
 export(ctex_template)
+export(els_article)
 export(frontiers_article)
 export(jss_article)
 export(plos_article)
