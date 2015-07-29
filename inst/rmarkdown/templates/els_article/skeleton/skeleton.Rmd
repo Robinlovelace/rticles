@@ -35,8 +35,8 @@ bibliography: library.bib
 
 # Abstract 
 
-
 # Introduction
+
 Cite fancy references [@Garnier2007].
 
 # Results 
@@ -59,13 +59,6 @@ ggplot(data = data.frame(x, y),
 
 # Conclusion
 
-You may title this section "Methods" or "Models". "Models" is not a valid title 
-for PLoS ONE authors. However, PLoS ONE authors may use "Analysis" 
-
 # Acknowledgments 
 
-Do NOT remove this, even if you are not including acknowledgments
-
 # References 
-
-A reference list should be automatically created here. 
