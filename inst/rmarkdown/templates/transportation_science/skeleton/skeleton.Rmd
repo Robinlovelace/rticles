@@ -1,9 +1,20 @@
 ---
 title: Example title
+author:
+  - name: FirstName LastName
 abstract: >
   Text of your abstract
 output: rticles::transportation_science
 ---
+
+Welcome to the RMarkdown version of the
+Transportation Science template (see https://www.informs.org/Find-Research-Publications/INFORMS-Journals/Author-Portal/LaTeX-Style-Files).
+
+Currently this class does not accept `\href` style hyperlinks(!) because of the LaTeX setup.
+It is hoped that this is resolved in future versions of the template
+
+To add an author or other things, open the .tex file in the article's directory and modify it.
+The output from this skeleton is kept close to the original.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

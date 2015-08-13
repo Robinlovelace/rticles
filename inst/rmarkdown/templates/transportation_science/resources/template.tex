@@ -85,10 +85,12 @@ $title$
 %   should be entered in ONE field, separated by a comma.
 %   \EMAIL field can be repeated if more than one author
 \ARTICLEAUTHORS{%
-\AUTHOR{Author1}
-\AFF{Author1 affiliation, \EMAIL{}, \URL{}}
-\AUTHOR{Author2}
-\AFF{Author2 affiliation, \EMAIL{}, \URL{}}
+\AUTHOR{
+$for(author)$$author.name$
+}
+% \AFF{Author1 affiliation, \EMAIL{}, \URL{}}
+% \AUTHOR{Author2}
+% \AFF{Author2 affiliation, \EMAIL{}, \URL{}}
 % Enter all authors
 } % end of the block
 
