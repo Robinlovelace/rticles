@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+
+
+\usepackage{erc}
+\usepackage{multirow}
+
+%
+% Common defs for ERC proposal
+%
+\usepackage[square,sort,comma,numbers]{natbib} % Arguments are to fix natbib when used with numerical bib style
+\usepackage{xspace}
+\usepackage{doi}
+\usepackage{graphicx}
+\usepackage{eurosym} % for the Euro symbol
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{enumitem} % for changes to list formatting http://mirror.ox.ac.uk/sites/ctan.org/macros/latex/contrib/enumitem/enumitem.pdf
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+
+% Make figure captions a little smaller
+\usepackage[font=small]{caption}
+
+\usepackage{hyperref} % Should come last
+
+
+\hypersetup{
+   colorlinks,
+   menucolor=black,
+   linkcolor=black,
+   citecolor=black,
+   urlcolor=blue
+}
+
+\newcommand\project{DUST\xspace}
+\newcommand\surname{Malleson}
+
+\begin{document}
+
+\lhead{\emph{\surname}}
+\chead{Template Title}
+\rhead{\project}
+\cfoot{\thepage}
+
+\newcommand{\note}[1]{{\color{red}\it #1}}
+%\newcommand{\note}[1]{}
+
+\begin{center}
+  \vbox{\vspace{1.5cm}}
+  \Large{\textbf{%
+      ERC Starting Grant 2017\\
+      Research proposal [Part B2]\\}
+  }
+  \vspace{1cm}
+\end{center}
+
+%\note{15 pages\\
+%  Description of the scientific and technical aspects of the project,
+%  demonstrating the ground-breaking nature of the research, its potential
+%  impact and research methodology. The proposal will also need to clearly
+%  specify the percentage of the applicant's total working time that will be
+%  spent in the EU or an Associated Country and the percentage of the
+%  applicant’s total working time that will be devoted to the project, as well
+%  as a full estimation of the real project cost.
+%}
+
+% \tableofcontents
+
+\section{State-of-the-art and objectives}
+
+\noindent\fbox{
+    \parbox{0.95\textwidth}{ This research will create a new method for dynamically assimilating data into agent-based models. This will create a step-change in our ability to reliably simulate urban systems and to forecast of the impacts of civil emergencies (and their management plans) on human populations. } }
+
+% ************************************************************
+\subsection*{Introduction}
+
+Blahblahblah.
+
+\hypertarget{adding-an-rmarkdown-template}{%
+\subsection{Adding an RMarkdown
+Template}\label{adding-an-rmarkdown-template}}
+
+This file is what a user will see when they select your template. Make
+sure that you update the fields in the yaml header. In particular you
+will want to update the \texttt{output} field to whatever format your
+template requires.
+
+This is a good place to demonstrate special features that your template
+provides. Ideally it should knit out-of-the-box, or at least contain
+clear instructions as to what needs changing.
+
+Finally, be sure to remove this message!
+
+% \input{B2/method}
+% \input{B2/resources}
+
+\newpage
+\appendix
+%\include{ethics}
+
+
+%\bibliographystyle[round]{plainnat}
+%\bibliographystyle{unsrt}
+\bibliographystyle{acm}
+\bibliography{B1-final}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% End:
