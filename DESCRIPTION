@@ -37,6 +37,6 @@ Imports: utils, rmarkdown, knitr, yaml, tinytex, xfun
 SystemRequirements: GNU make
 URL: https://github.com/rstudio/rticles
 BugReports: https://github.com/rstudio/rticles/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 Suggests: testit, bookdown, xtable
 Encoding: UTF-8

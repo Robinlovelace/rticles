@@ -1,0 +1,218 @@
+\documentclass[11pt]{article}
+
+
+%%
+%% ERC grant style file
+%% Originally based on http://www.arj.no/2013/02/03/erc-stg-latex/
+%% But modded a lot
+%%
+%% Phil Garner, Autumn 2015
+%%
+
+% Redefine sections to be the usual size, and say "Section x"
+\makeatletter
+\renewcommand\section{%
+  \@startsection {section} % Name
+  {1} %Level
+  {\z@} %Indent
+  {-1.5ex \@plus -1ex \@minus -.2ex} % Beforeskip
+  {0.01ex \@plus.2ex} % Afterskip
+  {\normalfont\large\bfseries} % Style
+}
+\renewcommand\subsection{%
+  \@startsection{subsection}{2}{\z@}%
+  {-1.25ex\@plus -1ex \@minus -.2ex}%
+  {0.01ex \@plus -1ex}%
+  {\normalfont\small\bfseries} % Style
+}
+\makeatother
+\renewcommand\thesection{Section \alph{section}:}
+
+% Header & footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{5mm}
+\setlength{\headsep}{3mm}
+\setlength{\footskip}{8mm}
+\renewcommand{\headrulewidth}{0pt} % Remove line at top
+
+% Page geometry
+\usepackage[a4paper,left=20mm,right=20mm,top=15mm,bottom=15mm]{geometry}
+\fancyhfoffset[E,O]{0pt} % recalculate the headers
+
+% Itemize from arj
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*}
+\renewcommand{\labelitemi}{--}
+
+% Misc
+\usepackage{parskip}
+
+%%% Local Variables:
+%%% mode: latex
+%%% End:
+
+\usepackage{multirow}
+
+%
+% Common defs for ERC proposal
+%
+\usepackage[square,sort,comma,numbers]{natbib} % Arguments are to fix natbib when used with numerical bib style
+\usepackage{xspace}
+\usepackage{doi}
+\usepackage{graphicx}
+\usepackage{eurosym} % for the Euro symbol
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{enumitem} % for changes to list formatting http://mirror.ox.ac.uk/sites/ctan.org/macros/latex/contrib/enumitem/enumitem.pdf
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+
+% Make figure captions a little smaller
+\usepackage[font=small]{caption}
+
+\usepackage{hyperref} % Should come last
+
+
+\hypersetup{
+   colorlinks,
+   menucolor=black,
+   linkcolor=black,
+   citecolor=black,
+   urlcolor=blue
+}
+
+\newcommand\project{PROID\xspace}
+\newcommand\surname{Anonymous}
+
+\begin{document}
+
+\lhead{\emph{\surname}}
+\chead{Short Paper}
+\rhead{\project}
+\cfoot{\thepage}
+
+\newcommand{\note}[1]{{\color{red}\it #1}}
+%\newcommand{\note}[1]{}
+
+\begin{center}
+  \vbox{\vspace{1.5cm}}
+  \Large{\textbf{%
+      ERC Starting Grant 2018\\
+      Research proposal {[}Part B2{]}\\}
+  }
+  \vspace{1cm}
+\end{center}
+
+%\note{15 pages\\
+%  Description of the scientific and technical aspects of the project,
+%  demonstrating the ground-breaking nature of the research, its potential
+%  impact and research methodology. The proposal will also need to clearly
+%  specify the percentage of the applicant's total working time that will be
+%  spent in the EU or an Associated Country and the percentage of the
+%  applicant’s total working time that will be devoted to the project, as well
+%  as a full estimation of the real project cost.
+%}
+
+% \tableofcontents
+
+\section{State-of-the-art and objectives}
+
+\noindent\fbox{
+    \parbox{0.95\textwidth}{This is the abstract.
+
+It consists of two paragraphs.} }
+
+% ************************************************************
+
+\hypertarget{introduction}{%
+\subsection{Introduction}\label{introduction}}
+
+Lorem ipsum dolor sit(Meier 2012) amet, consectetur adipiscing(Fenner
+2012) elit. Pellentesque rhoncus ut tellus eu tristique. Duis pharetra
+velit vitae viverra elementum. Nulla metus dui, pulvinar id enim at,
+pellentesque semper ipsum. Phasellus cursus dignissim ipsum, sed congue
+orci pretium quis. Maecenas rhoncus leo a cursus euismod. Fusce a erat
+eu ipsum tristique tempus at sed tortor. Aliquam erat volutpat. Donec at
+pretium lorem. Donec pretium nunc id nunc bibendum convallis. Phasellus
+quis enim id massa feugiat egestas hendrerit sollicitudin nibh. Sed
+blandit eros id tellus porta, eget ullamcorper urna posuere.
+Pellentesque laoreet lacus nibh, a mattis libero viverra sit amet. Sed
+vitae diam interdum, pharetra neque sit amet, dictum lectus.
+
+\hypertarget{methodology}{%
+\section{Methodology}\label{methodology}}
+
+Donec massa justo, ultricies quis facilisis sed, tristique nec metus.
+Vestibulum id condimentum diam. Integer semper augue id porttitor
+ultrices. Cras vulputate felis eu diam porttitor, ac pulvinar nisi
+imperdiet. Donec eros felis, imperdiet vel malesuada at, varius et quam.
+Phasellus facilisis non risus eu placerat. Sed ac mollis lorem.
+
+\hypertarget{evaluation}{%
+\subsection{Evaluation}\label{evaluation}}
+
+Nullam semper imperdiet orci, at lacinia est aliquet et. Sed justo nibh,
+aliquet et velit at, pharetra consequat velit. Nullam nec ligula
+sagittis, adipiscing nisl sed, varius massa. Mauris quam ante, aliquet a
+nunc et, faucibus imperdiet libero. Suspendisse odio tortor, bibendum
+vel semper sit amet, euismod ac ante. Nunc nec dignissim turpis, ac
+blandit massa. Donec auctor massa ac vestibulum aliquam. Fusce auctor
+dictum lobortis. Vivamus tortor augue, convallis quis augue sit amet,
+laoreet tristique quam. Donec id volutpat orci. Suspendisse at mi vel
+elit accumsan porta ac ut diam. Nulla ut dapibus quam.
+
+Sed est odio, ornare in rutrum et, dapibus in urna. Suspendisse varius
+massa in ipsum placerat, quis tristique magna consequat. Suspendisse non
+convallis augue. Quisque fermentum justo et lorem volutpat euismod.
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+cubilia Curae; Morbi sagittis interdum justo, eu consequat nisi
+convallis in. Sed tincidunt risus id lacinia ultrices. Phasellus ac
+ligula sed mi mattis lacinia ac non felis. Etiam at dui tellus.
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+Duis nec purus sed neque porttitor tincidunt vitae quis augue. Donec
+porttitor aliquam ante, nec convallis nisl ornare eu. Morbi ut purus et
+justo commodo dignissim et nec nisl. Donec imperdiet tellus dolor, vel
+dignissim risus venenatis eu. Aliquam tempor imperdiet massa, nec
+fermentum tellus sollicitudin vulputate. Integer posuere porttitor
+pharetra. Praesent vehicula elementum diam a suscipit. Morbi viverra
+velit eget placerat pellentesque. Nunc congue augue non nisi ultrices
+tempor.
+
+\hypertarget{references}{%
+\subsection*{References}\label{references}}
+\addcontentsline{toc}{subsection}{References}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-fenner2012a}{}%
+Fenner, Martin. 2012. ``One-Click Science Marketing.'' \emph{Nature
+Materials} 11 (4). Nature Publishing Group: 261--63.
+\url{https://doi.org/10.1038/nmat3283}.
+
+\leavevmode\hypertarget{ref-meier2012}{}%
+Meier, Reto. 2012. \emph{Professinal Android 4 Application Development}.
+John Wiley \& Sons, Inc.
+
+% \input{B2/method}
+% \input{B2/resources}
+
+\newpage
+\appendix
+%\include{ethics}
+
+
+%\bibliographystyle[round]{plainnat}
+%\bibliographystyle{unsrt}
+\bibliographystyle{acm}
+\bibliography{B1-final}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% End:
