@@ -1,0 +1,4 @@
+name: Elsevier articles using Harvard template
+description: >
+  Template for creating an article for submission to Elsevier journals.
+create_dir: TRUE
