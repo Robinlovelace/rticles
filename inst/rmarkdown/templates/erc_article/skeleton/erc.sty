@@ -1,0 +1,49 @@
+%%
+%% ERC grant style file
+%% Originally based on http://www.arj.no/2013/02/03/erc-stg-latex/
+%% But modded a lot
+%%
+%% Phil Garner, Autumn 2015
+%%
+
+% Redefine sections to be the usual size, and say "Section x"
+\makeatletter
+\renewcommand\section{%
+  \@startsection {section} % Name
+  {1} %Level
+  {\z@} %Indent
+  {-1.5ex \@plus -1ex \@minus -.2ex} % Beforeskip
+  {0.01ex \@plus.2ex} % Afterskip 
+  {\normalfont\large\bfseries} % Style
+}
+\renewcommand\subsection{%
+  \@startsection{subsection}{2}{\z@}%
+  {-1.25ex\@plus -1ex \@minus -.2ex}%
+  {0.01ex \@plus -1ex}%
+  {\normalfont\small\bfseries} % Style
+}
+\makeatother
+\renewcommand\thesection{Section \alph{section}:}
+
+% Header & footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{5mm}
+\setlength{\headsep}{3mm}
+\setlength{\footskip}{8mm}
+\renewcommand{\headrulewidth}{0pt} % Remove line at top
+
+% Page geometry
+\fancyhfoffset[E,O]{0pt} % recalculate the headers
+
+% Itemize from arj
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*}
+\renewcommand{\labelitemi}{--}
+
+% Misc
+\usepackage{parskip}
+
+%%% Local Variables:
+%%% mode: latex
+%%% End:
