@@ -1,5 +1,8 @@
 ---
-title: My Application
+title: 'Future transport models: data-driven, modular and open'
+project: FTMOD
+grant_name: ERC Starting Grant 2018
+doc_name: Research proposal [Part B2]
 author:
   - name: Alice Anonymous
     email: alice@example.com
@@ -7,22 +10,47 @@ author:
   - name: Bob Security
     email: bob@example.com
     affiliation: Another University
+surname: Lovelace
 abstract: |
   This is the abstract.
 
   It consists of two paragraphs.
-bibliography: sigproc.bib
 output: rticles::erc_article
+bibliography: erc.bib
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Vision {-}
 
-## Adding an RMarkdown Template
+The foundations of transport models were laid in the mid 20^th^ century when the priority then was planning for explosive growth in car ownership and use [@boyce_forecasting_2015].
+Since then much has changed: policy, research, data and technology landscapes have been transformed.
+But the tools and research methods underlying transport models have, with a few notable exceptions, been slow to evolve.
 
-This file is what a user will see when they select your template. Make sure that you update the fields in the yaml header. In particular you will want to update the `output` field to whatever format your template requires.
+21^st^ century transport planning tools must meet different objectives.
+In the **European context** they must support legally binding commitments to: tackle air pollution (see [uk-air.defra.gov.uk](https://uk-air.defra.gov.uk/air-pollution/uk-eu-policy-context)); mitigate greenhouse gas emissions (set out in the [Climate Change Act 2008](http://www.legislation.gov.uk/ukpga/2008/27/contents)); and ensure transport equality for all (set out in the [Equality Act 2010](https://www.gov.uk/guidance/equality-act-2010-guidance)).
 
-This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
+The outputs of this fellowship will have **global impact** (see Pathways to Impact).
+**Worldwide demand** for new transport models is driven by such factors, the most important of which is emerging research showing that transport policies can have huge public health benefits, if designed correctly [@celis-morales_association_2017].
+For such wider objectives to be met new transport modelling tools are needed:
+this need is reflected in the conclusions of the Commission on Travel Demand, the second headline recommendation of which was that tools for transport planning should be open source [@marsden_all_2018].
 
-Finally, be sure to remove this message!
+A wider driver of demand for new tools is that the transport sector is rapidly evolving.
+Big Data and the uptake of Machine Learning are parallel trends that demand new approaches, methods and software [@lovelace_big_2016; @lovelace_new_2017].
+The growth of Data Science in industry has not only become an area of economic growth, it has also created a skills gap following the continuing shift towards digital technology in the transport sector, as highlighted in the Transport Systems Catapult's [Intelligent Mobility Skills Strategy](http://ts.catapult.org.uk/imskills/).
+
+Finally, transport planning is inevitably part of the democratic process.
+New transport tools provide an opportunity for meaningful engagement via two way, peer-to-peer and asynchronous communication technologies (notwithstanding the risks of the digital divide).
+An example of the potential benefits of open access and participatory tools, and an indication of possible directions of travel, is the Department for the Transport funded Propensity to Cycle Tool (PCT) [@lovelace_propensity_2017].
+The PCT meets an urgent need for public sector and private transport planning organisations to have access to high quality and actionable evidence with minimum barriers to entry (see www.pct.bike).
+However, the approach is limited because it focusses only on a single mode and does not allow for locally specific scenarios to be developed.
+
+This proposal will meet the national, global, data and citizen science needs of transport tools outlined above.
+These needs mean that 21^st^ Century tools must take account of new datasets, open source software packages and stakeholder needs.
+The rest of this document explains how the project will do so and in the process generate value in economic, social, environmental and health terms for decades to come.
+
+# Background
+
+
+## References
+
+
+

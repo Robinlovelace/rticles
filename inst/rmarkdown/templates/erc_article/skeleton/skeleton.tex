@@ -1,7 +1,57 @@
 \documentclass[11pt]{article}
 
 
-\usepackage{erc}
+%%
+%% ERC grant style file
+%% Originally based on http://www.arj.no/2013/02/03/erc-stg-latex/
+%% But modded a lot
+%%
+%% Phil Garner, Autumn 2015
+%%
+
+% Redefine sections to be the usual size, and say "Section x"
+\makeatletter
+\renewcommand\section{%
+  \@startsection {section} % Name
+  {1} %Level
+  {\z@} %Indent
+  {-1.5ex \@plus -1ex \@minus -.2ex} % Beforeskip
+  {0.01ex \@plus.2ex} % Afterskip
+  {\normalfont\large\bfseries} % Style
+}
+\renewcommand\subsection{%
+  \@startsection{subsection}{2}{\z@}%
+  {-1.25ex\@plus -1ex \@minus -.2ex}%
+  {0.01ex \@plus -1ex}%
+  {\normalfont\small\bfseries} % Style
+}
+\makeatother
+\renewcommand\thesection{Section \alph{section}:}
+
+% Header & footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{5mm}
+\setlength{\headsep}{3mm}
+\setlength{\footskip}{8mm}
+\renewcommand{\headrulewidth}{0pt} % Remove line at top
+
+% Page geometry
+\usepackage[a4paper,left=20mm,right=20mm,top=15mm,bottom=15mm]{geometry}
+\fancyhfoffset[E,O]{0pt} % recalculate the headers
+
+% Itemize from arj
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*}
+\renewcommand{\labelitemi}{--}
+
+% Misc
+\usepackage{parskip}
+
+%%% Local Variables:
+%%% mode: latex
+%%% End:
+
 \usepackage{multirow}
 
 %
@@ -32,13 +82,13 @@
    urlcolor=blue
 }
 
-\newcommand\project{DUST\xspace}
-\newcommand\surname{Malleson}
+\newcommand\project{FTMOD\xspace}
+\newcommand\surname{Lovelace}
 
 \begin{document}
 
 \lhead{\emph{\surname}}
-\chead{Template Title}
+\chead{Future transport models: data-driven, modular and open}
 \rhead{\project}
 \cfoot{\thepage}
 
@@ -48,8 +98,8 @@
 \begin{center}
   \vbox{\vspace{1.5cm}}
   \Large{\textbf{%
-      ERC Starting Grant 2017\\
-      Research proposal [Part B2]\\}
+      ERC Starting Grant 2018\\
+      Research proposal {[}Part B2{]}\\}
   }
   \vspace{1cm}
 \end{center}
@@ -69,27 +119,120 @@
 \section{State-of-the-art and objectives}
 
 \noindent\fbox{
-    \parbox{0.95\textwidth}{ This research will create a new method for dynamically assimilating data into agent-based models. This will create a step-change in our ability to reliably simulate urban systems and to forecast of the impacts of civil emergencies (and their management plans) on human populations. } }
+    \parbox{0.95\textwidth}{This is the abstract.
+
+It consists of two paragraphs.} }
 
 % ************************************************************
-\subsection*{Introduction}
 
-Blahblahblah.
+\hypertarget{vision}{%
+\subsection*{Vision}\label{vision}}
+\addcontentsline{toc}{subsection}{Vision}
 
-\hypertarget{adding-an-rmarkdown-template}{%
-\subsection{Adding an RMarkdown
-Template}\label{adding-an-rmarkdown-template}}
+The foundations of transport models were laid in the mid
+20\textsuperscript{th} century when the priority then was planning for
+explosive growth in car ownership and use (Boyce and Williams 2015).
+Since then much has changed: policy, research, data and technology
+landscapes have been transformed. But the tools and research methods
+underlying transport models have, with a few notable exceptions, been
+slow to evolve.
 
-This file is what a user will see when they select your template. Make
-sure that you update the fields in the yaml header. In particular you
-will want to update the \texttt{output} field to whatever format your
-template requires.
+21\textsuperscript{st} century transport planning tools must meet
+different objectives. In the \textbf{European context} they must support
+legally binding commitments to: tackle air pollution (see
+\href{https://uk-air.defra.gov.uk/air-pollution/uk-eu-policy-context}{uk-air.defra.gov.uk});
+mitigate greenhouse gas emissions (set out in the
+\href{http://www.legislation.gov.uk/ukpga/2008/27/contents}{Climate
+Change Act 2008}); and ensure transport equality for all (set out in the
+\href{https://www.gov.uk/guidance/equality-act-2010-guidance}{Equality
+Act 2010}).
 
-This is a good place to demonstrate special features that your template
-provides. Ideally it should knit out-of-the-box, or at least contain
-clear instructions as to what needs changing.
+The outputs of this fellowship will have \textbf{global impact} (see
+Pathways to Impact). \textbf{Worldwide demand} for new transport models
+is driven by such factors, the most important of which is emerging
+research showing that transport policies can have huge public health
+benefits, if designed correctly (Celis-Morales et al. 2017). For such
+wider objectives to be met new transport modelling tools are needed:
+this need is reflected in the conclusions of the Commission on Travel
+Demand, the second headline recommendation of which was that tools for
+transport planning should be open source (Marsden et al. 2018).
 
-Finally, be sure to remove this message!
+A wider driver of demand for new tools is that the transport sector is
+rapidly evolving. Big Data and the uptake of Machine Learning are
+parallel trends that demand new approaches, methods and software
+(Lovelace et al. 2016; Lovelace and Fridman-Rojas 2017). The growth of
+Data Science in industry has not only become an area of economic growth,
+it has also created a skills gap following the continuing shift towards
+digital technology in the transport sector, as highlighted in the
+Transport Systems Catapult's
+\href{http://ts.catapult.org.uk/imskills/}{Intelligent Mobility Skills
+Strategy}.
+
+Finally, transport planning is inevitably part of the democratic
+process. New transport tools provide an opportunity for meaningful
+engagement via two way, peer-to-peer and asynchronous communication
+technologies (notwithstanding the risks of the digital divide). An
+example of the potential benefits of open access and participatory
+tools, and an indication of possible directions of travel, is the
+Department for the Transport funded Propensity to Cycle Tool (PCT)
+(Lovelace et al. 2017). The PCT meets an urgent need for public sector
+and private transport planning organisations to have access to high
+quality and actionable evidence with minimum barriers to entry (see
+www.pct.bike). However, the approach is limited because it focusses only
+on a single mode and does not allow for locally specific scenarios to be
+developed.
+
+This proposal will meet the national, global, data and citizen science
+needs of transport tools outlined above. These needs mean that
+21\textsuperscript{st} Century tools must take account of new datasets,
+open source software packages and stakeholder needs. The rest of this
+document explains how the project will do so and in the process generate
+value in economic, social, environmental and health terms for decades to
+come.
+
+\hypertarget{background}{%
+\section{Background}\label{background}}
+
+\hypertarget{references}{%
+\subsection*{References}\label{references}}
+\addcontentsline{toc}{subsection}{References}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-boyce_forecasting_2015}{}%
+Boyce, David E., and Huw C. W. L. Williams. 2015. \emph{Forecasting
+Urban Travel: Past, Present and Future}. Edward Elgar Publishing.
+
+\leavevmode\hypertarget{ref-celis-morales_association_2017}{}%
+Celis-Morales, Carlos A, Donald M Lyall, Paul Welsh, Jana Anderson,
+Lewis Steell, Yibing Guo, Reno Maldonado, et al. 2017. ``Association
+Between Active Commuting and Incident Cardiovascular Disease, Cancer,
+and Mortality: Prospective Cohort Study.'' \emph{BMJ}, April, j1456.
+\url{https://doi.org/10.1136/bmj.j1456}.
+
+\leavevmode\hypertarget{ref-lovelace_big_2016}{}%
+Lovelace, Robin, Mark Birkin, Philip Cross, and Martin Clarke. 2016.
+``From Big Noise to Big Data: Toward the Verification of Large Data Sets
+for Understanding Regional Retail Flows.'' \emph{Geographical Analysis}
+48 (1): 59--81. \url{https://doi.org/10.1111/gean.12081}.
+
+\leavevmode\hypertarget{ref-lovelace_new_2017}{}%
+Lovelace, Robin, and Ilan Fridman-Rojas. 2017. ``New Tools of the Trade?
+The Potential and Pitfalls of'Machine Learning'and'DAGs' to Model
+Origin-Destination Data.'' In \emph{GeoComputation 2017}, edited by Rob
+Long. Centre for Computational Geography, University of Leeds.
+
+\leavevmode\hypertarget{ref-lovelace_propensity_2017}{}%
+Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali
+Abbas, and James Woodcock. 2017. ``The Propensity to Cycle Tool: An Open
+Source Online System for Sustainable Transport Planning.'' \emph{Journal
+of Transport and Land Use} 10 (1).
+\url{https://doi.org/10.5198/jtlu.2016.862}.
+
+\leavevmode\hypertarget{ref-marsden_all_2018}{}%
+Marsden, Greg, Elaine Seagriff, Peter Jones, Nicola Spurling, and John
+Dales. 2018. \emph{All Change? The Future of Travel Demand and the
+Implications for Policy and Planning. First Report of the Commission on
+Travel Demand}. DEMAND.
 
 % \input{B2/method}
 % \input{B2/resources}
