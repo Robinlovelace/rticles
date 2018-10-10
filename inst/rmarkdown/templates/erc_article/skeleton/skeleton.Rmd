@@ -3,13 +3,10 @@ title: 'Future transport models: data-driven, modular and open'
 project: FTMOD
 grant_name: ERC Starting Grant 2018
 doc_name: Research proposal [Part B2]
-author:
-  - name: Alice Anonymous
-    email: alice@example.com
-    affiliation: Some Institute of Technology
-  - name: Bob Security
-    email: bob@example.com
-    affiliation: Another University
+doc_part: Part B2
+name: Alice Anonymous
+email: alice@example.com
+affiliation: Some Institute of Technology
 surname: Lovelace
 abstract: |
   This is the abstract.
@@ -18,6 +15,12 @@ abstract: |
 output: rticles::erc_article
 bibliography: erc.bib
 ---
+
+\noindent\fbox{
+    \parbox{0.95\textwidth}{$abstract$} }
+
+# State-of-the-art and objectives
+
 
 ## Vision {-}
 
