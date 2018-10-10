@@ -16,6 +16,22 @@ output: rticles::erc_article
 bibliography: erc.bib
 ---
 
+\begin{center}
+  \vbox{\vspace{1.5cm}}
+  \Large{\textbf{%
+      $grant_name$\\
+      $doc_name$\\}
+  }
+  \vspace{1cm}
+  \huge{
+  $title$
+  }\\
+  \vspace{1cm}
+  \huge{\project}\\
+  \vspace{1cm}
+
+\end{center}
+
 \noindent\fbox{
     \parbox{0.95\textwidth}{$abstract$} }
 
